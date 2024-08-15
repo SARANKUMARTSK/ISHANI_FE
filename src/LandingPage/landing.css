@@ -216,6 +216,11 @@
     gap: 5px;
     width: 600px;
 }
+@media screen and (max-width: 464px) {
+    .get_in_touch_form{
+        width: 90%;
+    }
+ }
 .get_in_touch_form>label{
     font-weight: 600;
 }
