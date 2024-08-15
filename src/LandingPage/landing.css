@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Margarine&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.topbar{
+    height: 120px;
+    background-color: white;
+    box-shadow: 0px 0px 5px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Amaranth", sans-serif;
+}
+.topbar-logo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topbar-logo>img{
+    height: 120px;
+    width: 150px;
+}
+.topbar_contents{
+    flex: 3;
+}
+.topbar_heading_list{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 600;
+}
+.subscribe_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    text-shadow: 0px 1px 1px white;
+    text-decoration: none !important;
+}
+.subscribe_button:hover{
+    color: red;
+    background-color: white;
+    box-shadow: 0px 0px 10px red;
+    transition: ease-in-out 300ms;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.topbar_heading_list > li {
+    position: relative;
+    padding-bottom: 2px; 
+    cursor: pointer;
+    transition: color 200ms; 
+}
+.topbar_heading_list > li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: gray;
+    transition: width 200ms;
+}
+.topbar_heading_list > li:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .topbar-logo>img{
+        height: 80px;
+        width: 100px;
+    }
+    .topbar_heading_list{
+        font-size: 14px;
+    }
+    .subscribe_button{
+        font-size: 10px;
+    }
+    .subscribe_button>svg{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+   .topbar_heading_list>li{
+     display: none;
+   }
+   .topbar{
+    justify-content: space-between !important;
+   }
+   .topbar_contents{
+    flex: 1;
+   }
+}
+
+
+/* About ------------------------------------ */
+.about {
+    background-image: url('/src/images/WEDDING.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explore_button{
+    border: 1px solid orangered;
+    padding: 10px 15px;
+    background-color: orangered;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+/* Services _______________________________________ */
+.services{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.sub_heading{
+    color: gray;
+    text-shadow: 0px 1px 1px ;
+    text-align: center;
+    margin-top: 20px;
+}
+.service_cards{
+    min-width: 1024px;
+    box-shadow: 0px 0px 5px gray;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+@media screen and (max-width: 1100px) {
+    .service_cards{
+        min-width: 80%;
+    }
+}
+@media screen and (max-width: 464px) {
+    .service_cards{
+        width: 90%;
+    }
+ }
+.icon_emoji{
+    font-size: 70px;
+}
+.orange_font{
+    color: orangered;
+}
+
+
+/* Gallery ???????///////////////////////// */
+
+.gallery{
+    min-height: 80vh;
+}
+.gallery_collection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.gallery_collection>img{
+    height: 250px;
+    width: 380px;
+}
+.more_button{
+    border: 1px solid gray;
+    height: 250px;
+    width: 200px;
+    background-color: gray;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+/* Get In Touch _-----------------__---------------------- */
+.get_in_touch{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.get_in_touch_form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 600px;
+}
+.get_in_touch_form>label{
+    font-weight: 600;
+}
+.get_in_touch_form>input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 4px;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+}
+.get_in_touch_form>textarea{
+    border-radius: 5px;
+    min-height: 100px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px gray;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.send_button{
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: orangered;
+    color: white;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.send_button:hover{
+    box-shadow: 0px 0px 5px orangered;
+    background-color: white;
+    color: orangered;
+}
+
+
+
+/* Footer ......................... */
+.footer{
+    min-height: 250px;
+    background-color: rgb(47, 45, 45);
+}
